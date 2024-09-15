@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Title and Subtitle */
+.title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* Navigation Links */
+.navigation-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navigation-links a {
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    background-color: #007bff;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.navigation-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.navigation-links a:hover::before {
+    left: 100%;
+}
+
+.navigation-links a:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navigation-links a:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .navigation-links a {
+        font-size: 1.15rem;
+        padding: 12px 25px;
+    }
+}
